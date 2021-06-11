@@ -1,0 +1,7 @@
+{
+  "name": "list-of-psychologists",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
