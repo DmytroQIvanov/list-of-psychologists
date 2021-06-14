@@ -1,11 +1,14 @@
 import './NavPanel.css';
-import {IonItem} from '@ionic/react'
+import {IonPage,IonProgressBar, IonMenu,IonToolbar,IonTitle,IonContent,IonList ,IonHeader,IonItem,IonRouterOutlet,IonMenuToggle} from '@ionic/react';
 
 interface ContainerProps { }
 
 const NavPanel: React.FC<ContainerProps> = () => {
   return (
-    <div className="container">
+
+    <IonMenu side="start" contentId="main"  className="" >
+
+      <div className="container">
           <IonItem routerLink="/all" className={`link`}>
             <p>Все психологи</p>
           </IonItem>
@@ -23,6 +26,11 @@ const NavPanel: React.FC<ContainerProps> = () => {
           </IonItem>
           
     </div>
+    </IonMenu>
+    
+
+
+
   );
 };
 

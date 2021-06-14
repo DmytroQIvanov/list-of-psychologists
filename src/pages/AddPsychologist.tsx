@@ -26,7 +26,6 @@ const AddPsychologist = () => {
 
     return (
       <IonPage>
-        <NavPanel/>
 
         {/* ///Error panel/// */}
         {errorMessage&&

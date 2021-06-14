@@ -10,7 +10,6 @@ const Analytics= (props:{list:Ipsychologist[]}) => {
   const {list} = props;
   return (
     <IonPage>
-    <NavPanel/>
 
     {/* Specialty block */}
     <IonContent>

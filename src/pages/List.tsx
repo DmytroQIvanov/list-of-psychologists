@@ -1,7 +1,5 @@
-import { IonContent,IonPage, 
-    IonList,IonProgressBar,  } from '@ionic/react';
+import {IonPage,IonProgressBar, IonMenu,IonToolbar,IonTitle,IonContent,IonList ,IonHeader,IonItem,IonRouterOutlet,IonMenuToggle} from '@ionic/react';
 
-import NavPanel from '../components/NavPanel';
 import PsychologistElemList from '../components/PsychologistElemList';
 import { Ipsychologist } from '../interfaces/Ipsychologist';
 
@@ -11,7 +9,8 @@ const List = (props:{list:Ipsychologist[]}) => {
     return (
       <IonPage>
         <IonContent >
-        <NavPanel/> 
+
+    
 
         {/* Psychologist list  or ProgressBar*/}
         {list?.length?
@@ -22,6 +21,8 @@ const List = (props:{list:Ipsychologist[]}) => {
       <IonProgressBar type="indeterminate"></IonProgressBar>}
       
     
+      
+
         </IonContent>
       </IonPage>
     );

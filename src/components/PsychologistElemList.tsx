@@ -10,18 +10,17 @@ const PsychologistElemList = (props:{psyhologist:Ipsychologist,indx:number}) => 
     const {psyhologist,indx} = props;
     const dispatch = useAppDispatch();
   return (
-    <IonItem>
+      <>
     {/* ///Information block/// */}
     <>
-        <IonLabel>
-        Имя: {psyhologist.name}
-        <IonLabel>
+        <IonItem>
+        Имя: {psyhologist.name} <br />
         Фото: {psyhologist.photo}
-        </IonLabel>
+        </IonItem>
         
-        </IonLabel>
-        <IonLabel>Электронная почта: {psyhologist.email}</IonLabel>
-        <IonLabel>Специальность: {psyhologist.type}</IonLabel>
+        <IonItem>Электронная почта: {psyhologist.email} <br/>
+        Специальность: {psyhologist.type}
+        </IonItem>
     </>
     {/* ///Block buttons/// */}
     <>
@@ -50,9 +49,8 @@ const PsychologistElemList = (props:{psyhologist:Ipsychologist,indx:number}) => 
 
         }}>Delete <IonIcon icon={trash}></IonIcon></IonButton>
     </>
-    
+    </>
 
-</IonItem>
   );
 };
 

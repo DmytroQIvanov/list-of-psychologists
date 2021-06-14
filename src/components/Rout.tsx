@@ -1,4 +1,4 @@
-import { IonApp, IonButton, IonRouterOutlet } from "@ionic/react";
+import { IonApp, IonButton, IonHeader, IonItem, IonRouterOutlet,IonMenu,IonToolbar,IonTitle,IonContent,IonList } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { useEffect, useState } from "react";
 import { Provider, useSelector } from "react-redux";
@@ -7,15 +7,16 @@ import { Ipsychologist } from "../interfaces/Ipsychologist";
 import AddPsychologist from "../pages/AddPsychologist";
 import Analytics from "../pages/Analytics";
 import List from "../pages/List";
-import { RootState } from "../redux";
 import { useAppDispatch } from "../redux/store";
 import { addUsers } from "../redux/users";
 import { fetchData } from "../service/firebaseFunction";
+import NavPanel from './NavPanel'
 
 
 
 const Rout= (props:any) => {
     const dispatch = useAppDispatch();
+    const [sideBar,setSideBar] = useState(false);
 
     // ***fetching initial data***
     useEffect(()=>{
@@ -32,9 +33,14 @@ const Rout= (props:any) => {
   return (
 
       <IonApp>
+
+
     <IonReactRouter>
 
-      <IonRouterOutlet>
+        <NavPanel/>
+
+
+      <IonRouterOutlet id='main'>
           {/* Psychologist adding block */}
         <Route exact path="/add">
           <AddPsychologist />

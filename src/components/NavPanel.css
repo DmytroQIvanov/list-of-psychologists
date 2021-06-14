@@ -2,11 +2,13 @@
   text-align: center;
   left: 0;
   right: 0;
-  display: flex;
+  display: block;
+  position: relative;
 }
 
 .link{
   margin: 10px;
+  display: block;
   
 }
 .container strong {
